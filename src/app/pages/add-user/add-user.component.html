@@ -1,0 +1,28 @@
+<div class="card">
+
+    <form  [formGroup]="form">
+    
+        <div class="form-group" >
+          <label for=""></label>
+          <input type="email" class="form-control" formControlName="fName" id="" aria-describedby="emailHelpId" placeholder="">
+          <small id="emailHelpId" class="form-text text-muted">Help text</small>
+        </div>
+        <div class="form-group">
+          <label for=""></label>
+          <input type="email" class="form-control" formControlName="lName" id="" aria-describedby="emailHelpId" placeholder="">
+          <small id="emailHelpId" class="form-text text-muted">Help text</small>
+        </div>
+        <div class="form-group">
+          <label for=""></label>
+          <input type="email" class="form-control" formControlName="mobile" id="" aria-describedby="emailHelpId" placeholder="">
+          <small id="emailHelpId" class="form-text text-muted">Help text</small>
+        </div>
+        <button class="col-2 ms-auto" (click)="save()">send</button>
+    </form>
+</div>
+{{userData |json}}
+<ul>
+    @for (color of userData; track color) {
+    <li>{{ color.fName }}</li>
+    }
+  </ul>
